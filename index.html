@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Metadata and links omitted for brevity -->
+  <style>
+    .title-centered {
+      text-align: center;
+    }
+    .image-centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; /* Increased width for larger image */
+}
+    .image-bigger {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 750%; /* Increased width for larger image */
+}
+.image-half-width {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%; /* Set width to 50% */
+}
+    .image-smaller {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%; /* Set width to 50% */
+}
+.content-centered {
+  text-align: justify; /* Aligns text like the abstract */
+  font-size: 1rem; /* Matches the abstract font size */
+}
+
+.section {
+  background-color: #f5f5f5; /* Consistent background like the abstract */
+}
+    .subtitle {
+      margin-top: 20px; /* Adds space between image and text */
+      font-size: 1rem; /* Matches the abstract font size */
+    }
+    .light-section {
+      background-color: #f5f5f5; /* Light gray background */
+    }
+    .dark-section {
+      background-color: #ffffff; /* White background */
+    }
+  </style>
+</head>
+<body>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Make It Count: Text-to-Image Generation with an Accurate Number of Objects">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Make It Count</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/counting_images/dice-svgrepo-com.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Make It Count: Text-to-Image Generation with an Accurate Number of Objects</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="">Lital Binyamin</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://yoadtew.github.io/">Yoad Tewel</a><sup>2,3</sup></span>,
+            <span class="author-block">
+              <a href="">Hilit Segev</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://eranhirs.github.io/">Eran Hirsch</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=_6g4hxsAAAAJ&hl=en">Royi Rassin</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://chechiklab.biu.ac.il/~gal/">Gal Chechik</a><sup>1,2</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Bar Ilan University,</span>
+            <span class="author-block"><sup>2</sup>NVIDIA,</span>
+            <span class="author-block"><sup>3</sup>Tel Aviv University</span>
+
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Demo</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/counting_images/fig_1.jpg" alt="Descriptive text about the image" style="width:150%; margin-left: -10%;">
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">CountGen</span> generates the correct number of objects specified in the input prompt while
+maintaining a natural layout that aligns with the prompt.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title has-text-centered">Examples of Text-to-Image Generation with CountGen</h2>
+
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+           <img src="./static/counting_images/bears.png" alt="Descriptive text about the image" style="width:200%;">
+      <h2 class="subtitle has-text-centered">
+        </div>
+
+        <div class="item item-shiba">
+        <img src="./static/counting_images/donuts.png" alt="Descriptive text about the image" style="width:200%;">
+
+        </div>
+
+
+                <div class="item item-shiba">
+        <img src="./static/counting_images/rabbits.png" alt="Descriptive text about the image" style="width:200%;">
+
+        </div>
+
+
+                <div class="item item-shiba">
+        <img src="./static/counting_images/cakes.png" alt="Descriptive text about the image" style="width:200%;">
+
+        </div>
+
+
+        
+        <div class="item item-shiba">
+        <img src="./static/counting_images/backpacks.png" alt="Descriptive text about the image" style="width:200%;">
+
+        </div>
+        <div class="item item-blueshirt">
+         <img src="./static/counting_images/apples_new.png" alt="Descriptive text about the image" style="width:200%;">
+        </div>
+        <div class="item item-coffee">
+         <img src="./static/counting_images/roses.png" alt="Descriptive text about the image" style="width:200%;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Despite the unprecedented success of text-to-image diffusion models, controlling the number of depicted objects using text is surprisingly hard. This is important for 
+            various applications from technical documents, to children’s books to illustrating cooking recipes. Generating object-correct counts is fundamentally challenging 
+            because the generative model needs to keep a sense of separate identity for every instance of the object, even if several objects look identical or overlap, and then
+carry out a global computation implicitly during generation. It is still unknown if such representations exist. To address count-correct generation, we first identify
+features within the diffusion model that can carry the object identity information. We then use them to separate and count instances of objects during the denoising 
+process and detect over-generation and under-generation. We fix the latter by training a model that proposes the right location for missing objects, based on the layout of existing ones, and show how it can be used to guide denoising
+with correct object count. Our approach, CountGen, does not depend on external source to determine object layout, but rather uses the prior from the diffusion
+model itself, creating prompt-dependent and seed-dependent layouts. Evaluated on two benchmark datasets, we find that CountGen strongly outperforms the count accuracy of existing baselines.
+
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+
+
+
+<section class="architecture">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 title-centered">How does CountGen work?</h2>
+        <div class="hero-body">
+          <img src="./static/counting_images/Architecture-1.png" alt="Architecture of CountGen" class="image-bigger">
+          <p class="content-centered">
+            Our method, CountGen, aims to enhance text-conditioned image generators to accurately produce the intended number of objects for complex input prompts. Our methodology involves a two-step process: initially, we generate a natural layout that specifies where and how objects should appear in the image. That layout is based on a layout that emerges naturally from the text-conditioned generation. At the second step, we use this layout as a blueprint to generate the final image.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+ <section class="architecture">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 title-centered">Identify "Objectness" In SDXL</h2>
+        <div class="hero-body">
+          <img src="./static/counting_images/pca_vis-1.png" alt="Architecture of CountGen" class="image-half-width">
+          <p class="content-centered">
+        While most layers do not exhibit separability at the instance level, we notice that a specific layer at a specific timestamp tends to generate different features for different instances of the same object. Based on this finding, we select the self-attention features to serve as our instance-level features.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <section class="architecture">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 title-centered">ReLayout - Natural Layout Correction</h2>
+        <div class="hero-body">
+          <img src="./static/counting_images/remasker (1)-1.png" alt="Architecture of CountGen" class="image-half-width">
+            <p class="content-centered">
+To address under-generation issues, we train a U-Net model to predict a new layout, represented as a multi-channel mask. To train our ReLayout U-Net, 
+        we need a dataset of layout pairs with k and k +1 objects, that maintain the same scene composition. We begin with the empirical observation
+        that slight variations in the object count specified in the prompt—while keeping the starting noise
+        and the rest of the prompt consistent—typically results in images with similar layouts. This consistency is crucial as it allows us to generate a training dataset of
+        layout pairs where each pair has a similar object composition, differing by only one object, thereby
+        preserving the overall scene structure.      </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="architecture">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 title-centered">Qualitative Results</h2>
+        <img src="./static/counting_images/qualitative_comparison-1.png" alt="Architecture of CountGen" class="image-bigger" style="margin-left: -7%;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+             Website source code based on the <a
+              href="https://nerfies.github.io/">Nerfies</a> project page. If you want to reuse their <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> , please credit them appropriately.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body>
+</html>
