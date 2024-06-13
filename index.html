@@ -278,7 +278,7 @@ model itself, creating prompt-dependent and seed-dependent layouts. Evaluated on
       <div class="column is-four-fifths">
         <h2 class="title is-3 title-centered">Identify "Objectness" In SDXL</h2>
         <div class="hero-body">
-          <img src="./static/counting_images/pca_vis-1.png" alt="Architecture of CountGen" class="image-half-width">
+          <img src="./static/counting_images/pca_vis-2.png" alt="Architecture of CountGen" class="image-half-width">
           <p class="content-centered">
         While most layers do not exhibit separability at the instance level, we notice that a specific layer at a specific timestamp tends to generate different features for different instances of the same object. Based on this finding, we select the self-attention features to serve as our instance-level features.
           </p>
@@ -312,11 +312,17 @@ To address under-generation issues, we train a U-Net model to predict a new layo
 </section>
 
 <section class="architecture">
-  <div class="container is-max-desktop">
+  <div class="container">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3 title-centered">Qualitative Results</h2>
         <img src="./static/counting_images/qualitative_comparison-1.png" alt="Architecture of CountGen" class="image-bigger" style="margin-left: -7%;">
+      </br>
+        <p class="content-centered">
+            We evaluated CountGen against DALLE 3, Reason Out Your
+            Layout, SDXL, Repeated Object SDXL and Counten Layout + Bounded Attention. Our method
+            successfully generates the correct number of objects, while other methods struggle in some or all of
+            the examples. </p>
       </div>
     </div>
   </div>
